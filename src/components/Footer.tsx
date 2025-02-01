@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} BrandName. All rights reserved. | Privacy Policy</p>
+        <p>&copy; {new Date().getFullYear()} Chorinthians. All rights reserved. | Privacy Policy</p>
       </div>
     </footer>
   );
