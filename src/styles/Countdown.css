@@ -1,0 +1,96 @@
+/* Countdown Container */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: 15px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+  }
+  
+  /* Countdown Item */
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Countdown Box (Calendar Style) */
+  .countdown-box {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+  }
+  
+  /* Calendar Header (Mimicking a calendar tab) */
+  .countdown-box::before {
+    content: "";
+    width: 60%;
+    height: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.179);
+    position: absolute;
+    top: 5px;
+    border-radius: 5px;
+    background: none;
+  }
+  
+  /* Hover effect */
+  .countdown-box:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Countdown Value */
+  .countdown-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #facc15; /* Yellow accent */
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+    margin-top: 20px; /* Adjusted to align with calendar tab */
+  }
+  
+  /* Countdown Label */
+  .countdown-label {
+    margin-top: 8px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #fff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .countdown-container {
+      gap: 0.5rem;
+      padding: 1rem;
+      justify-content: center;
+      flex-wrap: nowrap; /* Keep items on the same row */
+      overflow-x: auto; /* Enable horizontal scrolling if needed */
+    }
+  
+    .countdown-box {
+      width: 75px;
+      height: 75px;
+    }
+  
+    .countdown-value {
+      font-size: 1.8rem;
+    }
+  
+    .countdown-label {
+      font-size: 0.75rem;
+    }
+  }
+  

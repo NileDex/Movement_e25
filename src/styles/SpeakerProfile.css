@@ -1,0 +1,115 @@
+/* SpeakerProfile Styles */
+.speaker-profile {
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+  }
+  
+  .profile-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background: url('../assets/BGF.gif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    color: white; /* Ensures text is visible over the dark overlay */
+}
+
+/* Dark overlay */
+.profile-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity for darkness */
+    z-index: 0;
+}
+
+/* Ensures content appears above the overlay */
+.profile-header * {
+    position: relative;
+    z-index: 1;
+}
+
+  .profile-image-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-title {
+    flex-grow: 1;
+  }
+  
+  .profile-title h1 {
+    color: #000080;
+    font-size: 2.5rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: bold;
+  }
+  
+  .profile-title h2 {
+    color: #000080;
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+  }
+  
+  .linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #0077b5;
+    text-decoration: none;
+  }
+  
+  .linkedin-link:hover {
+    opacity: 0.8;
+  }
+  
+  .profile-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .bio-paragraph {
+    color: #333;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .profile-header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .profile-image-container {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .profile-title h1 {
+      font-size: 2rem;
+    }
+  
+    .profile-title h2 {
+      font-size: 1.2rem;
+    }
+  }
+  
