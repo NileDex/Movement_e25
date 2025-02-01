@@ -1,21 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
 const ComingSoon: React.FC = () => {
-  const [email, setEmail] = useState<string>('');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-  };
-
-  const handleSubscribe = () => {
-    if (email) {
-      alert(`Thank you for subscribing with email: ${email}`);
-      setEmail('');
-    } else {
-      alert('Please enter a valid email address.');
-    }
-  };
 
   return (
     <div className="coming-soon-container">
