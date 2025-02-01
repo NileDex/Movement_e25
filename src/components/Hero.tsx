@@ -8,11 +8,11 @@ const Hero: React.FC = () => {
   const [showCalendarOptions, setShowCalendarOptions] = useState(false);
 
   const eventDetails = {
-    title: "Paris Blockchain Week",
-    description: "Join us at the 6th edition of Paris Blockchain Week, 8-10 April 2025.",
-    location: "Paris, France",
-    startDate: "2025-04-08T09:00:00",
-    endDate: "2025-04-10T17:00:00",
+    title: "Movement Blockchain Summit",
+    description: "Join us at the 1st edition Movement Blockchain Event, 10 May 2025.",
+    location: "Rivers State, Nigeria, House of Dayspring",
+    startDate: "2025-05-10T10:00:00",
+    endDate: "2025-05-10T17:00:00",
   };
 
   const createGoogleCalendarLink = () => {
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
         <h5>1ST EDITION</h5>
         <br />
         <h1>
-          CORINTHIAN <br /> BLOCKCHAIN SUMMIT
+         Movement <br /> BLOCKCHAIN SUMMIT
         </h1>
         <h2>8-10 May 2025</h2><h5>Annual</h5>
         <div className="navbar-buttons">
