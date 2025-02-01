@@ -22,9 +22,9 @@ const Navbar: React.FC = () => {
           <li>
             <a href="/">Home</a>
           </li>
-          <li>
+          {/* <li>
             <a href="/about">About</a>
-          </li>
+          </li> */}
           <li>
             <a href="/services">Services</a>
           </li>
