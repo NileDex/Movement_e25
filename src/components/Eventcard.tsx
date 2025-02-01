@@ -25,12 +25,23 @@ const EventProfileCard = () => {
         setImagePreview(base64String);
       };
       reader.readAsDataURL(file);
+
+      // Reset the file input value to prevent 'c:\fakepath' from being displayed
+      if (fileInputRef.current) {
+        fileInputRef.current.value = '';
+      }
     }
   };
 
   const handleDownload = async () => {
     if (cardRef.current) {
       try {
+        // Temporarily hide the nickname input during the capture
+        const nicknameInput = cardRef.current.querySelector('.nickname-input');
+        if (nicknameInput) {
+          nicknameInput.setAttribute('style', 'display: none');
+        }
+
         // Ensure images are fully loaded before rendering
         const images = cardRef.current.getElementsByTagName('img');
         const imagePromises = Array.from(images).map((img) => {
@@ -51,9 +62,14 @@ const EventProfileCard = () => {
 
         const url = canvas.toDataURL('image/png');
         const link = document.createElement('a');
-        link.download = 'event-profile.png';
+        link.download = `${nickname || 'profile'}-event-profile.png`; // Use nickname or default file name
         link.href = url;
         link.click();
+
+        // Restore the nickname input visibility
+        if (nicknameInput) {
+          nicknameInput.removeAttribute('style');
+        }
       } catch (err) {
         console.error('Error generating image:', err);
       }
@@ -81,8 +97,8 @@ const EventProfileCard = () => {
     <div className="event-profile-container">
       <div ref={cardRef} className="event-card" style={{ backgroundImage: background }}>
         <div className="event-header">
-          <h2 className="event-title">Tech Conference 2025</h2>
-          <p className="event-date">March 15-17, Virtual Event</p>
+          <h2 className="event-title">BLOCKCHAIN SUMMIT</h2>
+          <p className="event-date">10TH MAY, 25</p>
         </div>
 
         <div className="profile-container">
