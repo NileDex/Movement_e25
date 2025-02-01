@@ -10,6 +10,7 @@ import SpeakerProfile from './components/SpeakerProfile';
 import Ticket from './components/EventEmbed';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Footer from './components/Footer';
+import ComingSoon from './components/sponsor';
 
 
 
@@ -30,6 +31,7 @@ const App: React.FC = () => {
           <Route path="/speakerProfile/:id" element={<SpeakerProfile />} />
           <Route path='/EventCard' element={ <EventProfileCard/> }/>
           <Route path="/EventEmbed" element={ <Ticket/> } />
+          <Route path='/sponsor' element={ <ComingSoon/> } />
           
         </Routes>
         <Footer/>

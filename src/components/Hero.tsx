@@ -38,7 +38,8 @@ const Hero: React.FC = () => {
         <h1>
          Movement <br /> BLOCKCHAIN SUMMIT
         </h1>
-        <h2>8-10 May 2025</h2><h5>Annual</h5>
+        <h2>8-10 May 2025</h2>
+        
         <div className="navbar-buttons">
           <a href="/EventEmbed" className="ticket-buttonn">Ticket</a>
           <a href="/sponsor" className="sponsor-buttonn">Sponsor</a>
